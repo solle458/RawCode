@@ -1,0 +1,36 @@
+# OS
+.DS_Store
+._*
+
+# Editor / IDE
+.idea/
+.vscode/
+
+# Logs / temp
+*.log
+*.tmp
+*.swp
+
+# Jujutsu (jj) metadata (do not commit)
+.jj/
+
+# Rust
+target/
+**/*.rs.bk
+
+# Node / React
+node_modules/
+dist/
+build/
+.vite/
+.next/
+.nuxt/
+.turbo/
+.parcel-cache/
+coverage/
+
+# Tauri
+src-tauri/target/
+
+# Data
+data/
