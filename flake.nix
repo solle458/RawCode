@@ -6,7 +6,9 @@
 
     outputs = { self, nixpkgs, rust-overlay, ... }:
         let
-            pkgs = import nixpkgs { overlays = [ (import rust-overlay) ]; };
+            pkgs = import nixpkgs { 
+                overlays = [ rust-overlay.overlays.default ]; 
+            };
             # Tauri
             libraries = with pkgs; [ webkitgtk_4_1 gtk3 cairo gdk-pixbuf glib dbus openssl_3 ];
             packages = with pkgs; [
