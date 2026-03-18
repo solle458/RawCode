@@ -3,4 +3,13 @@ name = "RawCode"
 version = "0.1.0"
 edition = "2024"
 
-[dependencies]
+[workspace]
+resolver = "2"
+members = [
+    "src-tauri",
+    "crates/*"
+]
+
+[profile.release]
+codegen-units = 1 # ビルド時間は増加するが、実行時のパフォーマンスが最適化される
+lto = true        # Link Time Optimization: バイナリサイズの削減と実行速度向上
