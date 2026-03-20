@@ -43,6 +43,7 @@
                         pkgs.nodejs
                         pkgs.nodePackages.pnpm
                         pkgs.cargo-tauri
+                        pkgs.cargo-audit
                     ] ++ libraries ++ packages;
 
                     # Tauriがライブラリを見つけるための環境変数設定（Linuxのみ）
